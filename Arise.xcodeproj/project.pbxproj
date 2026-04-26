@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1CCAE7A02F8C9E6300FE074B /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCAE79F2F8C9E6300FE074B /* FirebaseCore */; };
+		1CCAE7A22F8C9E6300FE074B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCAE7A12F8C9E6300FE074B /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1CCAE77E2F8C957B00FE074B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCAE7A02F8C9E6300FE074B /* FirebaseCore in Frameworks */,
+				1CCAE7A22F8C9E6300FE074B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = Arise;
 			packageProductDependencies = (
+				1CCAE79F2F8C9E6300FE074B /* FirebaseCore */,
+				1CCAE7A12F8C9E6300FE074B /* FirebaseFirestore */,
 			);
 			productName = Arise;
 			productReference = 1CCAE76D2F8C957A00FE074B /* Arise.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = 1CCAE7642F8C957A00FE074B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1CCAE79E2F8C9E6300FE074B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1CCAE76E2F8C957A00FE074B /* Products */;
 			projectDirPath = "";
@@ -393,11 +405,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Arise/Arise.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Arise/Preview Content\"";
+				DEVELOPMENT_TEAM = W252Q37JMF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Arise reads your daily step count to automatically track your steps goal.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -421,11 +436,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Arise/Arise.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Arise/Preview Content\"";
+				DEVELOPMENT_TEAM = W252Q37JMF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Arise reads your daily step count to automatically track your steps goal.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +570,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CCAE79E2F8C9E6300FE074B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CCAE79F2F8C9E6300FE074B /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCAE79E2F8C9E6300FE074B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		1CCAE7A12F8C9E6300FE074B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCAE79E2F8C9E6300FE074B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CCAE7652F8C957A00FE074B /* Project object */;
 }
